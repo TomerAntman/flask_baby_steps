@@ -14,3 +14,4 @@ def all():
     sys.path.insert(0, 'https://github.com/TomerAntman/wis-advanced-python-2021-2022/application')
     import call_students
     return (call_students.sorted_list)
+
