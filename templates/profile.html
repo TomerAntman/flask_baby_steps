@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of students</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<body>
+<h2>{{ student["name"]}}</h2>
+<table>
+{% for key in student.keys() %}
+<tr><td><h4>{{ key }}:</h4></td><td>{{ student[key] }}</td></tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
+

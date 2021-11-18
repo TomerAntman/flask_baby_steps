@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of students</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<body>
+
+<ul>
+    {% for name in the_list %}
+    <li><a href="{{ '/all_students/%s'%name }}"><h4>{{ name }}</h4></a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
