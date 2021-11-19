@@ -15,7 +15,7 @@
     <nav> <!-- The Navigation Section element (provide navigation links )-->
         <h3>Click to see all and choose from list.</h3>
         <ul>
-            <li><a href="/all_students">All the students</a> </li>
+            <li><a href="/all_students"><b>All the students</b></a> </li>
         </ul>
         <h3>Or search for someone specific:</h3>
         <div>
@@ -25,11 +25,13 @@
             For example: in "name" you can write <span><i>moshe, david</i></span> but not <span><i>moshe,david</i></span>. (it is case insensitive)
         </div>
         <form action="/names_queried" method = "GET">
-            <ul>
+            <table>
                 {% for key in list_of_keys %}
-                <p>{{ key }}:   <input type = "text" name = {{ key }} /></p>
+                <tr><td><b>{{ key }}: </b></td><td><input type = "text" name = {{ key }} /></td></tr>
+
+
                 {% endfor %}
-            </ul>
+            </table>
             <p><input type = "submit" value = "search" /></p>
         </form>
     </nav>
