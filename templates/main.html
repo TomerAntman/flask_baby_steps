@@ -18,7 +18,20 @@
             <li><a href="/all_students">All the students</a> </li>
         </ul>
         <h3>Or search for someone specific:</h3>
-        <p>work in progress...</p>
+        <div>
+            Enter the information or part of the information by which you want to search.<br>
+            You may write part of a name for example (even just one letter).<br>
+            To search for multiple options under the same categories (all names that have "moshe" and "david" in them for example), add a comma and a space between them.<br>
+            For example: in "name" you can write <span><i>moshe, david</i></span> but not <span><i>moshe,david</i></span>. (it is case insensitive)
+        </div>
+        <form action="/names_queried" method = "GET">
+            <ul>
+                {% for key in list_of_keys %}
+                <p>{{ key }}:   <input type = "text" name = {{ key }} /></p>
+                {% endfor %}
+            </ul>
+            <p><input type = "submit" value = "search" /></p>
+        </form>
     </nav>
 
 </body>
